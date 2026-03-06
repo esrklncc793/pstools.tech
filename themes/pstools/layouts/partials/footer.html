@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3><span class="ps-icon">PS&gt;</span> {{ .Site.Title }}</h3>
+        <p>{{ .Site.Params.description }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Modules</h4>
+        <ul>
+          {{ range where .Site.RegularPages "Section" "modules" }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{{ "/blog/" | relURL }}">Blog</a></li>
+          <li><a href="https://github.com/baldator" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.powershellgallery.com/profiles/baldator" target="_blank" rel="noopener">PowerShell Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ now.Year }} {{ .Site.Title }}. Built with <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.</p>
+    </div>
+  </div>
+</footer>
+<script src="{{ "js/main.js" | relURL }}"></script>

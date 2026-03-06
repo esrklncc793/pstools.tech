@@ -1,0 +1,35 @@
+baseURL = "https://pstools.tech/"
+languageCode = "en-us"
+title = "PSTools.tech"
+theme = "pstools"
+summaryLength = 60
+enableRobotsTXT = true
+enableEmoji = true
+
+[params]
+  description = "Open-source PowerShell modules for developers and system administrators"
+  heroTitle = "PowerShell Modules for Modern Developers"
+  heroSubtitle = "Open-source PowerShell modules to supercharge your automation workflows. Templates, observability, and UX — all in one place."
+  author = "baldator"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Modules"
+    url = "/modules/"
+    weight = 2
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 3

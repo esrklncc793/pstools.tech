@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="container post-page">
+  <article class="blog-post">
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ with .Params.author }}<span class="post-author">by {{ . }}</span>{{ end }}
+      </div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.tags }}
+      <div class="post-tags">
+        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+      {{ with .Params.modules }}
+      <div class="post-modules">
+        <span class="related-label">Related modules:</span>
+        {{ range . }}
+        <a href="{{ "/modules/" | relURL }}{{ . | urlize }}/" class="module-ref">📦 {{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </header>
+
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+
+    <footer class="post-footer-nav">
+      {{ with .PrevInSection }}
+      <a href="{{ .RelPermalink }}" class="post-nav-prev">← {{ .Title }}</a>
+      {{ end }}
+      {{ with .NextInSection }}
+      <a href="{{ .RelPermalink }}" class="post-nav-next">{{ .Title }} →</a>
+      {{ end }}
+    </footer>
+  </article>
+
+  <aside class="post-sidebar">
+    <div class="sidebar-card">
+      <h3>Related Modules</h3>
+      {{ range .Params.modules }}
+      {{ $modName := . }}
+      {{ range where $.Site.RegularPages "Section" "modules" }}
+        {{ if eq .Title $modName }}
+        <div class="related-module-card">
+          <span class="related-module-icon">{{ .Params.icon | default "📦" }}</span>
+          <div>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <p>{{ .Params.summary | truncate 80 }}</p>
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+      {{ end }}
+      {{ if not .Params.modules }}
+      <p class="no-related">Browse all <a href="{{ "/modules/" | relURL }}">modules</a></p>
+      {{ end }}
+    </div>
+  </aside>
+</div>
+{{ end }}
