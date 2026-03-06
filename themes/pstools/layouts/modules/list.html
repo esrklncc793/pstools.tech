@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="page-description">{{ . }}</div>{{ end }}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="modules-grid">
+      {{ range .Pages }}
+      <div class="module-card">
+        <div class="module-card-header">
+          <div class="module-icon">{{ with .Params.icon }}{{ . }}{{ else }}📦{{ end }}</div>
+          <div class="module-badges">
+            {{ with .Params.github_stars }}
+            <span class="badge badge-stars">⭐ {{ . }}</span>
+            {{ end }}
+            {{ with .Params.version }}
+            <span class="badge badge-version">v{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+        <h3 class="module-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="module-summary">{{ .Params.summary | default .Summary }}</p>
+        <div class="module-tags">
+          {{ range .Params.tags }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <div class="module-links">
+          {{ with .Params.gallery_url }}
+          <a href="{{ . }}" class="link-pill link-gallery" target="_blank" rel="noopener">PSGallery</a>
+          {{ end }}
+          {{ with .Params.github_url }}
+          <a href="{{ . }}" class="link-pill link-github" target="_blank" rel="noopener">GitHub</a>
+          {{ end }}
+          <a href="{{ .RelPermalink }}" class="link-pill link-docs">Docs</a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

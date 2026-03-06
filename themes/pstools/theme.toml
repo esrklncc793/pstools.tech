@@ -1,0 +1,12 @@
+name = "pstools"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "A Hugo theme for showcasing PowerShell modules"
+homepage = "https://pstools.tech"
+tags = ["powershell", "modules", "documentation", "blog"]
+features = ["modules", "blog", "responsive", "dark-mode"]
+min_version = "0.100.0"
+
+[author]
+  name = "PSTools"
+  homepage = "https://pstools.tech"
