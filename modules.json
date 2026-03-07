@@ -1,0 +1,22 @@
+{
+  "modules": [
+    {
+      "name": "Poshstache",
+      "content_file": "content/modules/poshstache.md",
+      "github_repo": "baldator/poshstache",
+      "gallery_name": "Poshstache"
+    },
+    {
+      "name": "OtelCollector",
+      "content_file": "content/modules/otelcollector.md",
+      "github_repo": "baldator/PSOtelCollector",
+      "gallery_name": "OtelCollector"
+    },
+    {
+      "name": "PSSpinner",
+      "content_file": "content/modules/psspinner.md",
+      "github_repo": "baldator/PSspinner",
+      "gallery_name": "PSSpinner"
+    }
+  ]
+}
