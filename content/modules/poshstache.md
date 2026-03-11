@@ -7,7 +7,7 @@ version: "1.2.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-10"
+last_updated: "2026-03-11"
 github_url: "https://github.com/baldator/poshstache"
 github_stars: 35
 gallery_url: "https://www.powershellgallery.com/packages/Poshstache/"
