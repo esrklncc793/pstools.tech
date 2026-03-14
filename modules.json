@@ -17,6 +17,12 @@
       "content_file": "content/modules/psspinner.md",
       "github_repo": "baldator/PSspinner",
       "gallery_name": "PSSpinner"
+    },
+    {
+      "name": "PSFaker",
+      "content_file": "content/modules/psfaker.md",
+      "github_repo": "baldator/PSFaker",
+      "gallery_name": "PSFaker"
     }
   ]
 }
