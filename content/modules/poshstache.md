@@ -3,7 +3,7 @@ title: "Poshstache"
 date: 2024-01-01
 summary: "A PowerShell implementation of Mustache templates — render dynamic content from simple templates using hashtables and objects."
 icon: "🧩"
-version: "1.2.0"
+version: "0.1.10"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/Poshstache/"
 issues_url: "https://github.com/baldator/poshstache/issues"
 changelog_url: "https://github.com/baldator/poshstache/blob/master/CHANGELOG.md"
 install_cmd: "Install-Module -Name Poshstache"
-downloads: "50,000+"
+downloads: "178,080"
 color: "#0f3460"
 tags: ["templates", "mustache", "string", "rendering", "configuration"]
 weight: 1

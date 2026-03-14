@@ -3,7 +3,7 @@ title: "OtelCollector"
 date: 2024-01-02
 summary: "A PowerShell module for sending OpenTelemetry traces and metrics — bring observability to your PowerShell scripts and automation pipelines."
 icon: "📡"
-version: "0.1.3"
+version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "7.0"
@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/OtelCollector/"
 issues_url: "https://github.com/baldator/PSOtelCollector/issues"
 changelog_url: "https://github.com/baldator/PSOtelCollector/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name OtelCollector"
-downloads: "5,000+"
+downloads: "13"
 color: "#1a1a2e"
 tags: ["opentelemetry", "observability", "tracing", "metrics", "monitoring"]
 weight: 2
