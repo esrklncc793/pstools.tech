@@ -1,6 +1,6 @@
 ---
 title: "Introducing PSFaker: Realistic Fake Data for PowerShell"
-date: 2024-04-10
+date: 2026-03-10
 author: "baldator"
 tags: ["testing", "data-generation", "mock", "automation"]
 modules: ["PSFaker"]
