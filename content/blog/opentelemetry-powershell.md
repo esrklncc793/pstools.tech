@@ -1,6 +1,6 @@
 ---
 title: "OpenTelemetry in PowerShell: Observability for Your Scripts"
-date: 2024-02-20
+date: 2026-02-20
 author: "baldator"
 tags: ["opentelemetry", "observability", "monitoring", "devops"]
 modules: ["OtelCollector"]
