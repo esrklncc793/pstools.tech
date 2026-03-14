@@ -51,20 +51,17 @@ foreach ($module in $config.modules) {
 
     # --- PowerShell Gallery version and downloads ---
     try {
-        $galleryUri = "https://www.powershellgallery.com/api/v2/Packages" +
-                      "?`$filter=Id eq '$($module.gallery_name)' and IsLatestVersion eq true"
+        $galleryUri = "https://www.powershellgallery.com/api/v2/FindPackagesById()" +
+                      "?id='$($module.gallery_name)'&`$filter=IsLatestVersion"
         $response = Invoke-WebRequest -Uri $galleryUri -UseBasicParsing -ErrorAction Stop
         [xml]$xml = $response.Content
 
         $nsManager = New-Object System.Xml.XmlNamespaceManager($xml.NameTable)
-        $nsManager.AddNamespace("atom", "http://www.w3.org/2005/Atom")
-        $nsManager.AddNamespace("d",    "http://schemas.microsoft.com/ado/2007/08/dataservices")
-        $nsManager.AddNamespace("m",    "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")
+        $nsManager.AddNamespace("d", "http://schemas.microsoft.com/ado/2007/08/dataservices")
+        $nsManager.AddNamespace("m", "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")
 
-        $versionNode   = $xml.SelectSingleNode(
-            "//atom:entry/atom:content/m:properties/d:Version", $nsManager)
-        $downloadsNode = $xml.SelectSingleNode(
-            "//atom:entry/atom:content/m:properties/d:DownloadCount", $nsManager)
+        $versionNode   = $xml.SelectSingleNode("//d:Version", $nsManager)
+        $downloadsNode = $xml.SelectSingleNode("//d:DownloadCount", $nsManager)
 
         if ($versionNode)   { $version   = $versionNode.InnerText }
         if ($downloadsNode) { $downloads = [int]$downloadsNode.InnerText }
