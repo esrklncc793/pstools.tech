@@ -29,6 +29,12 @@
       "content_file": "content/modules/pswatchdog.md",
       "github_repo": "baldator/PSwatchdog",
       "gallery_name": "PSwatchdog"
+    },
+    {
+      "name": "PSInquirer",
+      "content_file": "content/modules/psinquirer.md",
+      "github_repo": "baldator/PSInquirer",
+      "gallery_name": "PSInquirer"
     }
   ]
 }
