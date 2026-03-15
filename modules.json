@@ -23,6 +23,12 @@
       "content_file": "content/modules/psfaker.md",
       "github_repo": "baldator/PSFaker",
       "gallery_name": "PSFaker"
+    },
+    {
+      "name": "PSwatchdog",
+      "content_file": "content/modules/pswatchdog.md",
+      "github_repo": "baldator/PSwatchdog",
+      "gallery_name": "PSwatchdog"
     }
   ]
 }
