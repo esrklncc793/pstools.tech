@@ -35,6 +35,12 @@
       "content_file": "content/modules/psinquirer.md",
       "github_repo": "baldator/PSInquirer",
       "gallery_name": "PSInquirer"
+    },
+    {
+      "name": "PSJinja",
+      "content_file": "content/modules/psjinja.md",
+      "github_repo": "baldator/PSJinja",
+      "gallery_name": "PSJinja"
     }
   ]
 }
