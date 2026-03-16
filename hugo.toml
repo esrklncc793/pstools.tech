@@ -13,6 +13,16 @@ enableEmoji = true
   author = "baldator"
   googleAnalytics = "G-T7JGFKGDR5"
 
+  # Giscus comments (https://giscus.app)
+  # To enable comments, set giscusRepo and giscusRepoId and giscusCategoryId below.
+  # 1. Enable GitHub Discussions in your repository.
+  # 2. Install the Giscus app: https://github.com/apps/giscus
+  # 3. Visit https://giscus.app, enter your repository, and copy the values below.
+  giscusRepo = ""
+  giscusRepoId = ""
+  giscusCategory = "General"
+  giscusCategoryId = ""
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
