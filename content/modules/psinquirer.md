@@ -3,18 +3,18 @@ title: "PSInquirer"
 date: 2024-01-06
 summary: "A PowerShell port of Inquirer.js — add interactive CLI prompts (text input, confirmations, lists, checkboxes) to your scripts."
 icon: "❓"
-version: "0.2.0"
+version: "1.0.1"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 github_url: "https://github.com/baldator/PSInquirer"
-github_stars: 2
+github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/PSInquirer/"
 issues_url: "https://github.com/baldator/PSInquirer/issues"
 changelog_url: "https://github.com/baldator/PSInquirer/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSInquirer"
-downloads: "12"
+downloads: "3"
 color: "#16213e"
 tags: ["cli", "prompts", "interactive", "ux", "terminal", "input"]
 weight: 6

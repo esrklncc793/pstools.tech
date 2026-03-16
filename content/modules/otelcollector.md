@@ -7,14 +7,14 @@ version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "7.0"
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 github_url: "https://github.com/baldator/PSOtelCollector"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/OtelCollector/"
 issues_url: "https://github.com/baldator/PSOtelCollector/issues"
 changelog_url: "https://github.com/baldator/PSOtelCollector/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name OtelCollector"
-downloads: "13"
+downloads: "14"
 color: "#1a1a2e"
 tags: ["opentelemetry", "observability", "tracing", "metrics", "monitoring"]
 weight: 2
