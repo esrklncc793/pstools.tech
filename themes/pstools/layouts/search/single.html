@@ -1,0 +1,26 @@
+{{ define "head-extra" }}
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+{{ end }}
+
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <h1>Search</h1>
+    <p class="page-description">Search across modules, blog posts, and documentation.</p>
+  </div>
+</div>
+<div class="container search-page">
+  <div id="search"></div>
+</div>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (typeof PagefindUI !== 'undefined') {
+      new PagefindUI({ element: '#search', showSubResults: true });
+    } else {
+      var el = document.getElementById('search');
+      if (el) { el.innerHTML = '<p>Search is not available. Please try again after the site has been fully built.</p>'; }
+    }
+  });
+</script>
+{{ end }}

@@ -12,6 +12,7 @@
         <li><a href="{{ "/" | relURL }}" {{ if .IsHome }}class="active"{{ end }}>Home</a></li>
         <li><a href="{{ "/modules/" | relURL }}" {{ if eq .Section "modules" }}class="active"{{ end }}>Modules</a></li>
         <li><a href="{{ "/blog/" | relURL }}" {{ if eq .Section "blog" }}class="active"{{ end }}>Blog</a></li>
+        <li><a href="{{ "/search/" | relURL }}" {{ if eq .RelPermalink "/search/" }}class="active"{{ end }}><span aria-hidden="true">&#128269;</span> Search</a></li>
       </ul>
     </nav>
   </div>
