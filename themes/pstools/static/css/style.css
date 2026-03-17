@@ -555,6 +555,18 @@ tr:nth-child(even) { background: var(--bg-secondary); }
 .related-posts { display: flex; flex-direction: column; gap: 1.25rem; }
 .post-card-horizontal { flex-direction: column; }
 
+/* ── Comments ─────────────────────────────────────────────── */
+.comments-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.comments-title {
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
 /* ── Page Header ──────────────────────────────────────────── */
 .page-header {
   background: linear-gradient(135deg, var(--ps-blue) 0%, #0a1628 100%);
