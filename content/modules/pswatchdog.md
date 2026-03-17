@@ -7,14 +7,14 @@ version: "1.0.1"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 github_url: "https://github.com/baldator/PSwatchdog"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/PSwatchdog/"
 issues_url: "https://github.com/baldator/PSwatchdog/issues"
 changelog_url: "https://github.com/baldator/PSwatchdog/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSwatchdog"
-downloads: "15"
+downloads: "18"
 color: "#0d2137"
 tags: ["watchdog", "monitoring", "process", "reliability", "automation"]
 weight: 5
