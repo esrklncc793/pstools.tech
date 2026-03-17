@@ -18,10 +18,10 @@ enableEmoji = true
   # 1. Enable GitHub Discussions in your repository.
   # 2. Install the Giscus app: https://github.com/apps/giscus
   # 3. Visit https://giscus.app, enter your repository, and copy the values below.
-  giscusRepo = ""
-  giscusRepoId = ""
+  giscusRepo = "esrklncc793/pstools.tech"
+  giscusRepoId = "R_kgDORgXV0Q"
   giscusCategory = "General"
-  giscusCategoryId = ""
+  giscusCategoryId = "DIC_kwDORgXV0c4C4oWd"
 
 [markup]
   [markup.goldmark]
