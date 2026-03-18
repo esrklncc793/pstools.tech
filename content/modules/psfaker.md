@@ -7,14 +7,14 @@ version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 github_url: "https://github.com/baldator/PSFaker"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/PSFaker/"
 issues_url: "https://github.com/baldator/PSFaker/issues"
 changelog_url: "https://github.com/baldator/PSFaker/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSFaker"
-downloads: "3"
+downloads: "4"
 color: "#16213e"
 tags: ["faker", "testing", "data-generation", "mock", "seeding"]
 weight: 4

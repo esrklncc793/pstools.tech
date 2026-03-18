@@ -7,14 +7,14 @@ version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 github_url: "https://github.com/baldator/PSJinja"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/PSJinja/"
 issues_url: "https://github.com/baldator/PSJinja/issues"
 changelog_url: "https://github.com/baldator/PSJinja/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSJinja"
-downloads: "0"
+downloads: "3"
 color: "#1a0a3c"
 tags: ["templates", "jinja2", "rendering", "configuration", "automation"]
 weight: 7

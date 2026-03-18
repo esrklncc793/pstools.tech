@@ -7,14 +7,14 @@ version: "1.0.4"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 github_url: "https://github.com/baldator/PSspinner"
 github_stars: 1
 gallery_url: "https://www.powershellgallery.com/packages/PSSpinner/1.0.4"
 issues_url: "https://github.com/baldator/PSspinner/issues"
 changelog_url: "https://github.com/baldator/PSspinner/blob/master/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSSpinner"
-downloads: "25"
+downloads: "26"
 color: "#0d2137"
 tags: ["cli", "spinner", "progress", "ux", "terminal", "animation"]
 weight: 3
