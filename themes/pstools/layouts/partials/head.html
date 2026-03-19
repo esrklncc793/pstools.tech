@@ -1,7 +1,140 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ $pageTitle := "" }}
+{{ if .IsHome }}
+  {{ $pageTitle = .Site.Title }}
+{{ else }}
+  {{ $pageTitle = printf "%s | %s" .Title .Site.Title }}
+{{ end }}
+
+{{ $desc := "" }}
+{{ with .Description }}{{ $desc = . }}{{ end }}
+{{ if not $desc }}{{ with .Summary }}{{ $desc = . | plainify }}{{ end }}{{ end }}
+{{ if not $desc }}{{ with .Site.Params.description }}{{ $desc = . }}{{ end }}{{ end }}
+
+{{ $robots := "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" }}
+{{ if or .Params.noindex (eq .Type "search") }}
+  {{ $robots = "noindex,follow" }}
+{{ end }}
+
+{{ $ogImage := "" }}
+{{ with .Params.ogImage }}{{ $ogImage = . | absURL }}{{ end }}
+{{ if not $ogImage }}{{ with .Params.image }}{{ $ogImage = . | absURL }}{{ end }}{{ end }}
+{{ if not $ogImage }}{{ with .Site.Params.ogImage }}{{ $ogImage = . | absURL }}{{ end }}{{ end }}
+
+<title>{{ $pageTitle }}</title>
+<meta name="description" content="{{ $desc | plainify | htmlEscape }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="robots" content="{{ $robots }}">
+<meta name="googlebot" content="{{ $robots }}">
+
+<meta property="og:title" content="{{ $pageTitle }}">
+<meta property="og:description" content="{{ $desc | plainify | htmlEscape }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{ with $ogImage }}<meta property="og:image" content="{{ . }}">{{ end }}
+
+<meta name="twitter:card" content="{{ if $ogImage }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $pageTitle }}">
+<meta name="twitter:description" content="{{ $desc | plainify | htmlEscape }}">
+{{ with $ogImage }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+
+{{ $orgSchema := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" .Site.Title
+  "url" .Site.BaseURL
+}}
+<script type="application/ld+json">{{ $orgSchema | jsonify }}</script>
+
+{{ if .IsHome }}
+  {{ $websiteSchema := dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "name" .Site.Title
+    "url" .Site.BaseURL
+    "potentialAction" (dict
+      "@type" "SearchAction"
+      "target" (printf "%ssearch/?q={search_term_string}" .Site.BaseURL)
+      "query-input" "required name=search_term_string"
+    )
+  }}
+  <script type="application/ld+json">{{ $websiteSchema | jsonify }}</script>
+{{ end }}
+
+{{ if not .IsHome }}
+  {{ $items := slice (dict
+    "@type" "ListItem"
+    "position" 1
+    "name" "Home"
+    "item" .Site.BaseURL
+  ) }}
+  {{ $pos := 2 }}
+  {{ if .Section }}
+    {{ $items = $items | append (dict
+      "@type" "ListItem"
+      "position" $pos
+      "name" (.Section | humanize)
+      "item" (printf "%s%s/" .Site.BaseURL .Section)
+    ) }}
+    {{ $pos = add $pos 1 }}
+  {{ end }}
+  {{ if and .IsPage .Title }}
+    {{ $items = $items | append (dict
+      "@type" "ListItem"
+      "position" $pos
+      "name" .Title
+      "item" .Permalink
+    ) }}
+  {{ end }}
+  {{ $breadcrumbs := dict
+    "@context" "https://schema.org"
+    "@type" "BreadcrumbList"
+    "itemListElement" $items
+  }}
+  <script type="application/ld+json">{{ $breadcrumbs | jsonify }}</script>
+{{ end }}
+
+{{ if and .IsPage (eq .Section "blog") }}
+  {{ $blogPosting := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "description" ($desc | plainify)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "mainEntityOfPage" .Permalink
+    "author" (dict
+      "@type" "Person"
+      "name" (.Params.author | default .Site.Params.author | default .Site.Title)
+    )
+    "publisher" (dict
+      "@type" "Organization"
+      "name" .Site.Title
+      "url" .Site.BaseURL
+    )
+  }}
+  <script type="application/ld+json">{{ $blogPosting | jsonify }}</script>
+{{ end }}
+
+{{ if and .IsPage (eq .Section "modules") }}
+  {{ $moduleSchema := dict
+    "@context" "https://schema.org"
+    "@type" "TechArticle"
+    "headline" .Title
+    "description" ($desc | plainify)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "mainEntityOfPage" .Permalink
+    "author" (dict
+      "@type" "Person"
+      "name" (.Params.author | default .Site.Params.author | default .Site.Title)
+    )
+  }}
+  <script type="application/ld+json">{{ $moduleSchema | jsonify }}</script>
+{{ end }}
+
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 {{ if .Site.Params.googleAnalytics }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
