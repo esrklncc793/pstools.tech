@@ -7,7 +7,7 @@ version: "1.0.1"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 github_url: "https://github.com/baldator/PSwatchdog"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/PSwatchdog/"
