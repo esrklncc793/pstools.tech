@@ -22,6 +22,13 @@
 {{ if not $ogImage }}{{ with .Params.image }}{{ $ogImage = . | absURL }}{{ end }}{{ end }}
 {{ if not $ogImage }}{{ with .Site.Params.ogImage }}{{ $ogImage = . | absURL }}{{ end }}{{ end }}
 
+{{ $twitterImage := "" }}
+{{ with .Params.twitterImage }}{{ $twitterImage = . | absURL }}{{ end }}
+{{ if not $twitterImage }}{{ with .Params.ogImage }}{{ $twitterImage = . | absURL }}{{ end }}{{ end }}
+{{ if not $twitterImage }}{{ with .Params.image }}{{ $twitterImage = . | absURL }}{{ end }}{{ end }}
+{{ if not $twitterImage }}{{ with .Site.Params.twitterImage }}{{ $twitterImage = . | absURL }}{{ end }}{{ end }}
+{{ if not $twitterImage }}{{ with .Site.Params.ogImage }}{{ $twitterImage = . | absURL }}{{ end }}{{ end }}
+
 <title>{{ $pageTitle }}</title>
 <meta name="description" content="{{ $desc | plainify | htmlEscape }}">
 <link rel="canonical" href="{{ .Permalink }}">
@@ -35,10 +42,10 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 {{ with $ogImage }}<meta property="og:image" content="{{ . }}">{{ end }}
 
-<meta name="twitter:card" content="{{ if $ogImage }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:card" content="{{ if $twitterImage }}summary_large_image{{ else }}summary{{ end }}">
 <meta name="twitter:title" content="{{ $pageTitle }}">
 <meta name="twitter:description" content="{{ $desc | plainify | htmlEscape }}">
-{{ with $ogImage }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+{{ with $twitterImage }}<meta name="twitter:image" content="{{ . }}">{{ end }}
 
 {{ $orgSchema := dict
   "@context" "https://schema.org"

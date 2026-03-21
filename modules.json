@@ -41,6 +41,12 @@
       "content_file": "content/modules/psjinja.md",
       "github_repo": "baldator/PSJinja",
       "gallery_name": "PSJinja"
+    },
+    {
+      "name": "cWAP",
+      "content_file": "content/modules/cwap.md",
+      "github_repo": "baldator/cWAP",
+      "gallery_name": "cWAP"
     }
   ]
 }

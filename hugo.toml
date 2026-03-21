@@ -8,7 +8,8 @@ enableEmoji = true
 
 [params]
   description = "Open-source PowerShell modules for developers and system administrators"
-  ogImage = "/images/pstools-logo.jpg"
+  ogImage = "/images/pstools-banner.jpg"
+  twitterImage = "/images/pstools-logo.jpg"
   heroTitle = "PowerShell Modules for Modern Developers"
   heroSubtitle = "Open-source PowerShell modules to supercharge your automation workflows. Templates, observability, and UX — all in one place."
   author = "baldator"
