@@ -7,14 +7,14 @@ version: "1.0.1"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-21"
+last_updated: "2026-03-22"
 github_url: "https://github.com/baldator/PSInquirer"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/PSInquirer/"
 issues_url: "https://github.com/baldator/PSInquirer/issues"
 changelog_url: "https://github.com/baldator/PSInquirer/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSInquirer"
-downloads: "6"
+downloads: "7"
 color: "#16213e"
 tags: ["cli", "prompts", "interactive", "ux", "terminal", "input"]
 weight: 6
