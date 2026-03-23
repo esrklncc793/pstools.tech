@@ -32,9 +32,10 @@ if ($env:GITHUB_TOKEN) {
 foreach ($module in $config.modules) {
     Write-Host "Updating $($module.name)..."
 
-    $stars     = $null
-    $version   = $null
-    $downloads = $null
+    $stars       = $null
+    $version     = $null
+    $downloads   = $null
+    $publishedAt = $null
 
     # --- GitHub stars ---
     try {
@@ -62,11 +63,15 @@ foreach ($module in $config.modules) {
 
         $versionNode   = $xml.SelectSingleNode("//d:Version", $nsManager)
         $downloadsNode = $xml.SelectSingleNode("//d:DownloadCount", $nsManager)
+        $publishedNode = $xml.SelectSingleNode("//d:Published", $nsManager)
 
         if ($versionNode)   { $version   = $versionNode.InnerText }
         if ($downloadsNode) { $downloads = [int]$downloadsNode.InnerText }
+        if ($publishedNode) {
+            $publishedAt = ([datetime]$publishedNode.InnerText).ToString("yyyy-MM-dd")
+        }
 
-        Write-Host "  Version: $version, Downloads: $downloads"
+        Write-Host "  Version: $version, Downloads: $downloads, Published: $publishedAt"
     }
     catch {
         Write-Warning "  Failed to get PSGallery data for $($module.gallery_name): $_"
@@ -94,8 +99,8 @@ foreach ($module in $config.modules) {
         $content = $content -replace '(?m)^downloads:.*$', "downloads: `"$formatted`""
     }
 
-    $today = (Get-Date -Format "yyyy-MM-dd")
-    $content = $content -replace '(?m)^last_updated:.*$', "last_updated: `"$today`""
+    $lastUpdated = $publishedAt ?? (Get-Date -Format "yyyy-MM-dd")
+    $content = $content -replace '(?m)^last_updated:.*$', "last_updated: `"$lastUpdated`""
 
     Set-Content -Path $contentPath -Value $content -Encoding utf8 -NoNewline
     Write-Host "  ✓ Updated $($module.content_file)"
