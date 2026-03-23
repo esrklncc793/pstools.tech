@@ -612,6 +612,7 @@ tr:nth-child(even) { background: var(--bg-secondary); }
   .module-sidebar, .post-sidebar { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .module-stats { gap: 0.75rem; }
+  .module-hero { padding: 2.5rem 0; }
 }
 @media (max-width: 640px) {
   .nav-toggle { display: flex; }
@@ -632,9 +633,13 @@ tr:nth-child(even) { background: var(--bg-secondary); }
   .modules-grid { grid-template-columns: 1fr; }
   .posts-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .module-hero { padding: 2rem 0; }
   .module-hero-content { flex-direction: column; }
   .module-hero-icon { font-size: 2.5rem; }
-  .module-actions { flex-direction: column; align-items: flex-start; }
+  .module-actions { flex-direction: column; align-items: stretch; }
+  .install-cmd { width: 100%; overflow-x: auto; }
+  .module-page, .post-page { padding: 1.5rem 1rem; }
+  .post-content table, .module-doc-content table { display: block; overflow-x: auto; }
 }
 
 /* ── Search Page ──────────────────────────────────────────── */
