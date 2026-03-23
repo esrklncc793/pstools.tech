@@ -7,7 +7,7 @@ version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "7.0"
-last_updated: "2026-03-22"
+last_updated: "2026-03-23"
 github_url: "https://github.com/baldator/PSOtelCollector"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/OtelCollector/"
