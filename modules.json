@@ -47,6 +47,12 @@
       "content_file": "content/modules/cwap.md",
       "github_repo": "baldator/cWAP",
       "gallery_name": "cWAP"
+    },
+    {
+      "name": "Show-Syntax",
+      "content_file": "content/modules/show-syntax.md",
+      "github_repo": "baldator/show-syntax",
+      "gallery_name": "show-syntax"
     }
   ]
 }
