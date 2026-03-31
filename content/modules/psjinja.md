@@ -7,7 +7,7 @@ version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-16"
+last_updated: "2026-03-31"
 github_url: "https://github.com/baldator/PSJinja"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/PSJinja/"
