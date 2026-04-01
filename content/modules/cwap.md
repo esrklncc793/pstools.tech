@@ -7,14 +7,14 @@ version: "0.4.0"
 author: "Marco Torello"
 license: "MIT"
 powershell_version: "5.0"
-last_updated: "2026-03-31"
+last_updated: "2018-04-06"
 github_url: "https://github.com/baldator/cWAP"
 github_stars: 3
 gallery_url: "https://www.powershellgallery.com/packages/cWAP/"
 issues_url: "https://github.com/baldator/cWAP/issues"
 changelog_url: "https://github.com/baldator/cWAP/releases"
 install_cmd: "Install-Module -Name cWAP"
-downloads: "1,025"
+downloads: "1,027"
 color: "#133b5c"
 tags: ["dsc", "wap", "web-application-proxy", "adfs", "infrastructure-as-code"]
 weight: 8

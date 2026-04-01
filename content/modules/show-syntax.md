@@ -7,14 +7,14 @@ version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-03-31"
+last_updated: "2026-03-30"
 github_url: "https://github.com/baldator/show-syntax"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/show-syntax/"
 issues_url: "https://github.com/baldator/show-syntax/issues"
 changelog_url: "https://github.com/baldator/show-syntax/releases"
 install_cmd: "Install-Module -Name show-syntax"
-downloads: "0"
+downloads: "4"
 color: "#1a1a2e"
 tags: ["syntax-highlighting", "bat", "ansi", "terminal", "cli", "color"]
 weight: 9
