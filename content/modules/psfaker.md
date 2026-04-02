@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/PSFaker/"
 issues_url: "https://github.com/baldator/PSFaker/issues"
 changelog_url: "https://github.com/baldator/PSFaker/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSFaker"
-downloads: "32"
+downloads: "43"
 color: "#16213e"
 tags: ["faker", "testing", "data-generation", "mock", "seeding"]
 weight: 4
