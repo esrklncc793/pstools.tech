@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/PSInquirer/"
 issues_url: "https://github.com/baldator/PSInquirer/issues"
 changelog_url: "https://github.com/baldator/PSInquirer/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSInquirer"
-downloads: "90"
+downloads: "107"
 color: "#16213e"
 tags: ["cli", "prompts", "interactive", "ux", "terminal", "input"]
 weight: 6

@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/OtelCollector/"
 issues_url: "https://github.com/baldator/PSOtelCollector/issues"
 changelog_url: "https://github.com/baldator/PSOtelCollector/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name OtelCollector"
-downloads: "105"
+downloads: "122"
 color: "#1a1a2e"
 tags: ["opentelemetry", "observability", "tracing", "metrics", "monitoring"]
 weight: 2
