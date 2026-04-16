@@ -53,6 +53,12 @@
       "content_file": "content/modules/show-syntax.md",
       "github_repo": "baldator/show-syntax",
       "gallery_name": "show-syntax"
+    },
+    {
+      "name": "Show-Syntax",
+      "content_file": "content/modules/EntraComplianceAuditor.md",
+      "github_repo": "baldator/EntraComplianceAuditor",
+      "gallery_name": "EntraComplianceAuditor"
     }
   ]
 }
