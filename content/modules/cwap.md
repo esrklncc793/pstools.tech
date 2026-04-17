@@ -7,7 +7,7 @@ version: "0.4.0"
 author: "Marco Torello"
 license: "MIT"
 powershell_version: "5.0"
-last_updated: "2018-04-06"
+last_updated: "2026-04-17"
 github_url: "https://github.com/baldator/cWAP"
 github_stars: 3
 gallery_url: "https://www.powershellgallery.com/packages/cWAP/"
