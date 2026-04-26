@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/show-syntax/"
 issues_url: "https://github.com/baldator/show-syntax/issues"
 changelog_url: "https://github.com/baldator/show-syntax/releases"
 install_cmd: "Install-Module -Name show-syntax"
-downloads: "95"
+downloads: "111"
 color: "#1a1a2e"
 tags: ["syntax-highlighting", "bat", "ansi", "terminal", "cli", "color"]
 weight: 9
