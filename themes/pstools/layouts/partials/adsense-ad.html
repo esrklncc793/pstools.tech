@@ -1,0 +1,13 @@
+{{ if .Site.Params.adsenseClient }}
+<div class="ad-unit">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ .Site.Params.adsenseClient }}"
+       data-ad-slot="{{ .Params.adSlot | default "auto" }}"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+{{ end }}

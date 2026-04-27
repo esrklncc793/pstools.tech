@@ -143,6 +143,10 @@
 {{ end }}
 
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+{{ if .Site.Params.adsenseClient }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.adsenseClient }}"
+     crossorigin="anonymous"></script>
+{{ end }}
 {{ if .Site.Params.googleAnalytics }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
 <script>

@@ -642,7 +642,12 @@ tr:nth-child(even) { background: var(--bg-secondary); }
   .post-content table, .module-doc-content table { display: block; overflow-x: auto; }
 }
 
-/* ── Search Page ──────────────────────────────────────────── */
+/* ── AdSense ──────────────────────────────────────────────── */
+.ad-unit {
+  margin: 2rem 0;
+  text-align: center;
+  overflow: hidden;
+}
 .search-page {
   padding: 3rem 1.5rem;
   max-width: 860px;
