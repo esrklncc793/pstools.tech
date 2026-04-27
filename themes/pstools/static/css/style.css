@@ -648,6 +648,8 @@ tr:nth-child(even) { background: var(--bg-secondary); }
   text-align: center;
   overflow: hidden;
 }
+
+/* ── Search Page ──────────────────────────────────────────── */
 .search-page {
   padding: 3rem 1.5rem;
   max-width: 860px;
