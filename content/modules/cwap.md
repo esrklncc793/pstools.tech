@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/cWAP/"
 issues_url: "https://github.com/baldator/cWAP/issues"
 changelog_url: "https://github.com/baldator/cWAP/releases"
 install_cmd: "Install-Module -Name cWAP"
-downloads: "1,033"
+downloads: "1,035"
 color: "#133b5c"
 tags: ["dsc", "wap", "web-application-proxy", "adfs", "infrastructure-as-code"]
 weight: 8
