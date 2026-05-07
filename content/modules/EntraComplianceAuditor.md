@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/EntraComplianceAuditor/
 issues_url: "https://github.com/baldator/EntraComplianceAuditor/issues"
 changelog_url: "https://github.com/baldator/EntraComplianceAuditor/releases"
 install_cmd: "Install-Module -Name EntraComplianceAuditor"
-downloads: "236"
+downloads: "244"
 color: "#0f3460"
 tags: ["entra", "azure-ad", "compliance", "audit", "security", "microsoft-365"]
 weight: 10
