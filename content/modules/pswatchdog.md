@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/PSwatchdog/"
 issues_url: "https://github.com/baldator/PSwatchdog/issues"
 changelog_url: "https://github.com/baldator/PSwatchdog/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSwatchdog"
-downloads: "606"
+downloads: "620"
 color: "#0d2137"
 tags: ["watchdog", "monitoring", "process", "reliability", "automation"]
 weight: 5
