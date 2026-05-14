@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/PSJinja/"
 issues_url: "https://github.com/baldator/PSJinja/issues"
 changelog_url: "https://github.com/baldator/PSJinja/blob/main/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSJinja"
-downloads: "563"
+downloads: "580"
 color: "#1a0a3c"
 tags: ["templates", "jinja2", "rendering", "configuration", "automation"]
 weight: 7
