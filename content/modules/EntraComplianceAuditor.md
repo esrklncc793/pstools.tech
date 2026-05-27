@@ -7,7 +7,7 @@ version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-05-26"
+last_updated: "2026-04-16"
 github_url: "https://github.com/baldator/EntraComplianceAuditor"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/EntraComplianceAuditor/"
