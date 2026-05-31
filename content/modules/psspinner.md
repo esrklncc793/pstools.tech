@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/PSSpinner/1.0.4"
 issues_url: "https://github.com/baldator/PSspinner/issues"
 changelog_url: "https://github.com/baldator/PSspinner/blob/master/CHANGELOG.md"
 install_cmd: "Install-Module -Name PSSpinner"
-downloads: "697"
+downloads: "698"
 color: "#0d2137"
 tags: ["cli", "spinner", "progress", "ux", "terminal", "animation"]
 weight: 3
