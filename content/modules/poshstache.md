@@ -14,7 +14,7 @@ gallery_url: "https://www.powershellgallery.com/packages/Poshstache/"
 issues_url: "https://github.com/baldator/poshstache/issues"
 changelog_url: "https://github.com/baldator/poshstache/blob/master/CHANGELOG.md"
 install_cmd: "Install-Module -Name Poshstache"
-downloads: "182,991"
+downloads: "183,054"
 color: "#0f3460"
 tags: ["templates", "mustache", "string", "rendering", "configuration"]
 weight: 1
