@@ -7,14 +7,14 @@ version: "1.0.0"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-06-13"
+last_updated: "2026-04-16"
 github_url: "https://github.com/baldator/EntraComplianceAuditor"
 github_stars: 0
 gallery_url: "https://www.powershellgallery.com/packages/EntraComplianceAuditor/"
 issues_url: "https://github.com/baldator/EntraComplianceAuditor/issues"
 changelog_url: "https://github.com/baldator/EntraComplianceAuditor/releases"
 install_cmd: "Install-Module -Name EntraComplianceAuditor"
-downloads: "411"
+downloads: "412"
 color: "#0f3460"
 tags: ["entra", "azure-ad", "compliance", "audit", "security", "microsoft-365"]
 weight: 10
