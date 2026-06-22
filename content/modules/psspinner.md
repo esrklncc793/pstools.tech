@@ -7,7 +7,7 @@ version: "1.0.4"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-06-21"
+last_updated: "2026-02-21"
 github_url: "https://github.com/baldator/PSspinner"
 github_stars: 3
 gallery_url: "https://www.powershellgallery.com/packages/PSSpinner/1.0.4"
