@@ -7,14 +7,14 @@ version: "0.1.10"
 author: "baldator"
 license: "MIT"
 powershell_version: "5.1"
-last_updated: "2026-06-26"
+last_updated: "2021-02-04"
 github_url: "https://github.com/baldator/poshstache"
 github_stars: 35
 gallery_url: "https://www.powershellgallery.com/packages/Poshstache/"
 issues_url: "https://github.com/baldator/poshstache/issues"
 changelog_url: "https://github.com/baldator/poshstache/blob/master/CHANGELOG.md"
 install_cmd: "Install-Module -Name Poshstache"
-downloads: "183,647"
+downloads: "183,761"
 color: "#0f3460"
 tags: ["templates", "mustache", "string", "rendering", "configuration"]
 weight: 1
