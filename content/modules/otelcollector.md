@@ -9,7 +9,7 @@ license: "MIT"
 powershell_version: "7.0"
 last_updated: "2026-02-19"
 github_url: "https://github.com/baldator/PSOtelCollector"
-github_stars: 1
+github_stars: 2
 gallery_url: "https://www.powershellgallery.com/packages/OtelCollector/"
 issues_url: "https://github.com/baldator/PSOtelCollector/issues"
 changelog_url: "https://github.com/baldator/PSOtelCollector/blob/main/CHANGELOG.md"
